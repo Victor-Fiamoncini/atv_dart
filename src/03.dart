@@ -11,6 +11,8 @@ void main(List<String> args) {
     final new_wage = wage + (wage / 100) * readjustment_percentage;
 
     stdout.write('Salário com percentual de ajuste: $new_wage');
+  } on FormatException {
+    print('Erro ao formatar os valores digitados');
   } catch (e) {
     print('Ocorreu o seguinte erro -> $e');
   }
