@@ -9,9 +9,9 @@ void main(List<String> args) {
     final hours_worked = double.parse(stdin.readLineSync().toString());
 
     final total_salary = hour_value * hours_worked;
-    final irpf = (total_salary * 11) / 100;
-    final inss = (total_salary * 8) / 100;
-    final sindicate = (total_salary * 5) / 100;
+    final irpf = (total_salary / 100) * 11;
+    final inss = (total_salary / 100) * 8;
+    final sindicate = (total_salary / 100) * 5;
     final liquid_salary = total_salary - irpf - inss - sindicate;
 
     print('Salário bruto: $total_salary');

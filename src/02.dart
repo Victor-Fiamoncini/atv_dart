@@ -14,9 +14,9 @@ void main(List<String> args) {
     stdout.write('Informe o total de votos válidos: ');
     final valid_votes = int.parse(stdin.readLineSync().toString());
 
-    print('Relação votos brancos x eleitores: ${(voters * white_votes) / 100}');
-    print('Relação votos nulos x eleitores: ${(voters * null_votes) / 100}');
-    print('Relação votos válidos x eleitores: ${(voters * valid_votes) / 100}');
+    print('Relação votos brancos x eleitores: ${(white_votes * 100) / voters}');
+    print('Relação votos nulos x eleitores: ${(null_votes * 100) / voters}');
+    print('Relação votos válidos x eleitores: ${(valid_votes * 100) / voters}');
   } on FormatException {
     print('Erro ao formatar os valores digitados');
   } catch (e) {
